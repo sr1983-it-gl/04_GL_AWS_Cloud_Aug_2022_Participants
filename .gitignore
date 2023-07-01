@@ -4,3 +4,5 @@ _Environments/
 /.metadata/
 *.bat
 *.bat/
+*.lnk
+*.lnk/

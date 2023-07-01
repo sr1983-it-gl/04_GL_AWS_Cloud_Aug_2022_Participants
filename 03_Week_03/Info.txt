@@ -1,0 +1,7 @@
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+IP_ADDR=$(curl https://checkip.amazonaws.com/)
+echo "Server instance running with IP $IP_ADDR" > /var/www/html/index.html
