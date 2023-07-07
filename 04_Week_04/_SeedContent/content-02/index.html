@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+    </body>
+
+    <img src="images/car-01.png" width=450/>
+
+    <div id="includedContents"/>
+    <script>
+
+        const urlReference = "http://sr-cars-website-07-july-2023.s3.amazonaws.com/cars.html";
+        const includedContents = document.getElementById("includedContents");
+
+        fetch(urlReference)
+        .then((response) => { 
+            return response.text();
+        })
+        .then((contents) => {
+            includedContents.innerHTML = contents     
+        });
+    </script>
+</html>
+

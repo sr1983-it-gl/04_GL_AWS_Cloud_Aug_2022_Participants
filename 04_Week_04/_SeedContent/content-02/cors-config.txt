@@ -1,0 +1,15 @@
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "TODO"
+        ],
+        "ExposeHeaders": [],
+        "MaxAgeSeconds": 3000
+    }
+]
