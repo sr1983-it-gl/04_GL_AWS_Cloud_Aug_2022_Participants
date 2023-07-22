@@ -1,0 +1,48 @@
+# Section 03 - GSI Demo Data
+==============================
+
+aws dynamodb batch-write-item \
+    --request-items '{
+        "UserOrders": [
+            {
+                "PutRequest": {
+                    "Item": {
+                        "Username": {"S": "aarav"},
+                        "OrderId": {"S": "20160630-12928"},
+                        "Amount": {"N": "142.23"},
+                        "ReturnDate": {"S": "20160705"}
+                    }
+                }
+            },
+            {
+                "PutRequest": {
+                    "Item": {
+                        "Username": {"S": "umesh"},
+                        "OrderId": {"S": "20170608-10171"},
+                        "Amount": {"N": "18.95"},
+                        "ReturnDate": {"S": "20170628"}
+                    }
+                }
+            },
+            {
+                "PutRequest": {
+                    "Item": {
+                        "Username": {"S": "umesh"},
+                        "OrderId": {"S": "20170609-25875"},
+                        "Amount": {"N": "116.86"},
+                        "ReturnDate": {"S": "20170628"}
+                    }
+                }
+            },
+            {
+                "PutRequest": {
+                    "Item": {
+                        "Username": {"S": "rajesh"},
+                        "OrderId": {"S": "20170609-18618"},
+                        "Amount": {"N": "122.45"},
+                        "ReturnDate": {"S": "20170615"}
+                    }
+                }
+            }
+        ]
+    }' \
