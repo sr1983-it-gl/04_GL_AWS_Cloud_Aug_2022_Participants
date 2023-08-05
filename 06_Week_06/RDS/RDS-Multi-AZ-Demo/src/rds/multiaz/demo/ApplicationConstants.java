@@ -6,7 +6,7 @@ public class ApplicationConstants {
 		= "com.mysql.cj.jdbc.Driver";
 
 	public static String HOST = 
-	"rds-mysql-multi-az-instance-01.ctfgiek0mosx.us-east-1.rds.amazonaws.com";
+	"rds-mysql-multi-az-instance-02.ctfgiek0mosx.us-east-1.rds.amazonaws.com";
 	
 	public static String DB_NAME = "mydb";
 	
