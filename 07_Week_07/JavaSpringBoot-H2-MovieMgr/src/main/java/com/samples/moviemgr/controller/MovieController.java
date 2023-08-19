@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.samples.moviemgr.error.ErrorUtils;
 import com.samples.moviemgr.model.Movie;
 import com.samples.moviemgr.repository.MovieRepository;
 
@@ -37,6 +38,9 @@ public class MovieController {
 	@PostMapping(value = "/movies")
 	public int addMovie(@RequestBody Movie movie) {
 
+		ErrorUtils.checkForInvalidRating(movie);
+		ErrorUtils.checkForInvalidGenre(movie);
+		
 		repository.save(movie);
 		return movie.getId();
 	}

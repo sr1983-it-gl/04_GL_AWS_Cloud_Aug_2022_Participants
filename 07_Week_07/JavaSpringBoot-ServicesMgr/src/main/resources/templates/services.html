@@ -35,13 +35,15 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">Id</th>
-            <th scope="col">Title</th>
+            <th scope="col">Service Code</th>
+            <th scope="col">Name</th>
             <th scope="col">Keywords</th>
           </tr>
         </thead>
         <tbody>
           <tr th:each="service : ${services}">
             <th scope="row">[[${service.id}]]</th>
+            <td>[[${service.code}]]</td>
             <td>[[${service.name}]]</td>
             <td>[[${service.associatedKeywords}]]</td>
           </tr>

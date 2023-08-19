@@ -16,19 +16,13 @@ public class ServiceController {
 
 	@GetMapping("/")
 	public String home(Model model) {
-		
-		return getAll(model);		
-	}
-	
-	@GetMapping("/services")
-	public String getAll(Model model) {
+
 		try {
 			List<ServiceEntity> services = repository.listAll();
 			model.addAttribute("services", services);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "services";
+		return "services";		
 	}
-
 }

@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 app.get('/', function (req, res, next) {
 
     const systemStatsObj = getSystemStats();
+    console.log(JSON.stringify(systemStatsObj));
     const systemStatsDisplayHeaders = getSystemStatsDisplayHeaders();
     const systemStatsObjPropDisplayNames = getSystemStatsPropDisplayNames();
     const systemStatsPropNames = getSystemStatsObjPropNames(systemStatsObj);
