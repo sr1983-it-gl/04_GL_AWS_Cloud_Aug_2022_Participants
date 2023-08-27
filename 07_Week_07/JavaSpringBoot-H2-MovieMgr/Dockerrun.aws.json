@@ -1,7 +1,7 @@
 {
 	"AWSEBDockerrunVersion": "1",
 	"Image": {
-		"Name": "sr1983itgl/movie-mgr:1.0",
+		"Name": "sr1983itgl/movie-mgr:2.0",
 		"Update": "true"
 	},
 	"Ports": [
