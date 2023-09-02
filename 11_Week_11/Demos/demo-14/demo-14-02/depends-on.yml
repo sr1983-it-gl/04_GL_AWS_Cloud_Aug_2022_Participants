@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+
+  ClientModuleEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-009d6802948d06e52
+      InstanceType: t2.micro
+      Tags:
+        - Key: "Name"
+          Value: "ReactJS-App-EC2-Instance"  
+    DependsOn: ServerModuleEC2Instance
+
+  ServerModuleEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-009d6802948d06e52
+      InstanceType: t2.micro
+      Tags:
+        - Key: "Name"
+          Value: "NodeJS-App-EC2-Instance"  
+    DependsOn: DBModuleEC2Instance
+
+  DBModuleEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-009d6802948d06e52
+      InstanceType: t2.micro
+      Tags:
+        - Key: "Name"
+          Value: "MongoDB-Server-EC2-Instance"  

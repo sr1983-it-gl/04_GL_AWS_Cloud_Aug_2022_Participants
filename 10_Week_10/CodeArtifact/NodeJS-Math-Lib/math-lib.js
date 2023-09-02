@@ -9,4 +9,9 @@ function areaOfRectangle(length, breadth){
     return length * breadth;
 }
 
-export {areaOfCircle, areaOfRectangle};
+function areaOfSquare(param){
+
+    return param * param;
+}
+
+export {areaOfCircle, areaOfRectangle, areaOfSquare};
