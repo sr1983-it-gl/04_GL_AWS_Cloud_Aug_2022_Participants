@@ -6,8 +6,3 @@ _Environments/
 *.bat/
 *.lnk
 *.lnk/
-.terraform
-.terraform/**
-terraform.*
-.terraform.lock.hcl
-
